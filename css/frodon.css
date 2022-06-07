@@ -1,0 +1,86 @@
+tbody{
+    padding: 200px;
+}
+
+tr, td{
+   /* border: 1px solid black;*/
+}
+
+td{
+    width: 30px;
+    height: 30px;
+   /* border: 1px solid darkgray; */
+}
+
+table{
+    margin: auto;
+    border-collapse:collapse
+}
+
+.blanc{
+    background-color: white;
+}
+
+.noir{
+    background-color: #000000;
+}
+
+.marrond{
+    background-color: #322419;
+}
+
+.brown{
+    background-color: #423223;
+}
+
+.beige{
+    background-color: #FFA679;
+}
+
+.bfoncer{
+    background-color: #FF9865;
+}
+
+.kaki{
+    background-color: #27341B;
+}
+
+.green{
+    background-color: #395D20;
+}
+
+.vert{
+    background-color: #6A9731;
+}
+
+.gilet{
+    background-color: #873717;
+}
+
+.jacket{
+    background-color: #722C0E;
+}
+
+.tshirt{
+    background-color: #FEEECD;
+}
+
+.shirt{
+    background-color: #FFE5B4;
+}
+
+.ring{
+    background-color: #FACE35;
+}
+
+.pant1{
+    background-color: #9A5D31;
+}
+
+.pant2{
+    background-color: #84522D;
+}
+
+.pant3{
+   background-color: #734629;
+}

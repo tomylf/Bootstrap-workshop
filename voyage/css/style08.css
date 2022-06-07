@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Imbue:opsz,wght@10..100,300&family=Koulen&family=Kufam&family=Odibee+Sans&family=Rubik+Glitch&family=Shadows+Into+Light&display=swap');
+/* Kufam de google font avec différentes graisses */
+
+html, body{
+    margin: 0;
+    /* retrait du margin prédéfinit pour éviter les différences de résultat sur le navigateur */
+    padding: 0;
+    /* retrait du padding pour les mêms raison */
+    font-family: 'Kufam', cursive;
+    /* on définit la police kufam qu'on à importé comme la police de base du document */
+    text-shadow: 1px 1px 2px #000000a6;
+    /* le texte étant blanc sur des couleurs le text-shadow permet de la faire mieux ressortir (x, y, dispertion, couleur) */
+    /* il est recommendé d'utiliser un générateur pour faire des tests et comprendre le fonctionnement */
+}
+
+/*--------------------------HEADER------------------------------*/
+
+header{
+    /* définit un background color au cas où le dégradé ne soit pas pris en compte par le navigateur */
+    background: rgb(34, 193, 195);
+    /* red green blue possibilité d'opacité avec rgba (r, g, b opacity de 0 a 1 ) */
+    background: linear-gradient(0deg, rgba(34, 193, 195) 0% rgba(45, 253, 149, 0.681) 100%);
+    /* deg fait aller de bas en haut, pourcentage à partir duquel commence le mélange ----- pourcentage auquel fini le mélange */ 
+    display: flex;
+    /* display offre plein de moyen d'agencer les blocs, il s'avère très utile également pour le responsive, voir aussi grid */
+    justify-content: space-between;
+    /* combiné avecdisplay flex il agence les blocs enfants en les disposant aux extrémité du bloc */
+    height: 90px;
+}
+
+/* https://cssgradient.io/ */
+
+
+.gradient{
+    display: inline-block;
+    /* pour pouvoir mettre les blocs les uns à la file des autres */
+    margin: 10px; /* margin sur l'axe des x et des y */
+    height: 70px; /* fixe la taille pour qu'il fasse la même que l'image au dessus */
+    width: 50px;
+    background: rgb(0, 0, 0);
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.76) 0, rgba(65, 65, 65, 0.198) 20%, rgb(255, 255, 255, 0) 60%);
+    /* dégradé derrière l'image donnant une impression d'ombre pour faire ressortir le logo 100% est le rayon total de la balise, on peut mettre circle à la place de ellipse */
+}
+
+.gradient img{
+    height: 70px;
+}
+
+h1{
+    display: inline-block;
+    /* pour pouvoir le mettre à côté du logo */ 
+    font-size: 1.5rem;
+    color: aliceblue;
+    vertical-align: 1.1em;
+    /* centre manuellement le titre au milieu du bloc (vertical) et bien en face du logo */
+}
+
+nav{
+    display: inline-block;
+    /* pour changer le comportement de la nav et la placer à l'aide du display flex space between */
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline;
+    /* dispose les items de la liste à la ligne */
+    list-style: none;
+    /* retir les puces devant l'item */
+    margin: auto 2em;
+    /* espace les items */
+}
+
+nav ul li a{
+    text-decoration: none;
+    /*retir le soulignage des liens de la nav*/
+    color: aliceblue;
+    font-size: 1.2rem;
+    font-weight: 500;
+    /* augmente la graisse de la typo à 500 */
+    line-height: 90px;
+    /* met la hauteur de la ligne à 90px */
+}
+
+/* ------------------------BANDEAU DEFIANT---------------------------- */
+
+.banner{
+    border-color: rgba(34, 193, 195, 1);
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(99, 170, 166, 1);
+    /* box shadow pour chrome, safari, android... */
+    -moz-box-shadow: 0px 5px 10px 0px rgba(99, 170, 166, 1);
+    box-shadow: 0px 5px 10px 0px rgba(99, 170, 166, 1);
+    border: 4px double white;
+    /* border de 4px en tout avec double trait blanc */
+    /* 
+    compatibilité navigateur
+    -o- pour opera
+    -moz- pour gecko (Mozilla)
+    -webkit- pour (chrome, safari, androit...)
+    -ms- pour Microsoft (internet explorer)
+    -khtml- pour KHTML (Konqueror)
+    */
+}
+
+/* https://www.cssmatic.com/box-shadow */
+
+marquee{
+    /* balise html obsolète */
+    padding: 10px;
+    color: aliceblue;
+    text-shadow: 1px 1px 3px #000000a6;
+    /* text shadow plus prononcé que les autres */
+    letter-spacing: 2px;
+    /* espece entre les lettres */
+    word-spacing: 5px;
+    /* espace entre les mots */
+    font-size: 1.2rem;
+}
+
+/* ---------------------------ARTICLE--------------------------------- */
+article{
+    width: 70%;
+    /* largeur des article */
+    margin: 2em auto;
+    /* espacés les uns des autres et placé au centre horizontalement */
+    display: flex;
+    justify-content: space-evenly;
+    /* met des espaces égaux entre les éléments enfants */
+    border-radius: 15px;
+    /* bords arrondis */
+    box-shadow: 0px 0px 10px 0px rgba(99, 170, 166, 1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(99, 170, 166, 1);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(99, 170, 166, 1);
+    /* ombre de la balise au centre sur x et y une diffusion de la couleur sur 10 px et une ombre nette de 0 */
+
+}
+
+article:first-of-type{
+    /* cible la première balise de type articlel */
+    background: rgb(191, 129, 148);
+    background: linear-gradient(0deg, rgb(191, 129, 148, 1) 0%, rgba(86, 166, 241) 100%);
+}
+
+article:nth-of-type(2){
+    /* cible de la balise de type article */
+    background: rgb(97, 227, 194);
+    background: linear-gradient(0deg, rgba(94, 227, 194, 1) 0%, rgba(70, 134, 195, 1) 100%);
+}
+
+article:last-of-type{
+    /* cible la dernière de type article */
+    background: rgb(226, 132, 23);
+    background: linear-gradient(0deg, rgb(226, 132, 23, 1) 0%, rgba(92, 144, 181, 1) 75%);
+    /* pas 100% pour qu'il y ait un peu moins de jaune */
+
+}
