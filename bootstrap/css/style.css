@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+    font-family: 'dosis' sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,em, footer, p{
+    font-family: 'Texturina' serif;
+}
+
+h1{
+    font-size: 30px;
+}
+
+/* ************************ JUMBOTRON *************************** */
+
+.jumbotron{
+    background-image: url('../img/banner-buisnessman.jpg');
+    height: 711px;
+}
+
+.jumbotron div q:first-of-type{
+    font-size: 5em;
+    overflow: hidden;
+}
+
+.jumbotron div q:last-of-type{
+    font-size: 1.8em;
+}
+
+.fas.fa-chevron-down{
+    font-size: 500%;
+}
+
+/* ********************************* PROJECTS ***************************************** */
+
+section{
+    margin: 0;
+    padding: 0 !important;
+}
+
+#projects .card img{
+    height: 100%;
+}
+
+/* ********************************** COMPANY **************************************** */
+
+#company .card{
+    border: none;
+}
+
+
+/* ****************************** CONTACT ************************************** */
+
+#contact select#inputState{
+    height: 45px;
+    box-sizing: border-box;
+}
+
+iframe{
+    border: 5px solid #55595c;
+    border-radius: 6px;
+}

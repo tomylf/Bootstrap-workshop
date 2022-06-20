@@ -157,3 +157,108 @@ article:last-of-type{
     /* pas 100% pour qu'il y ait un peu moins de jaune */
 
 }
+
+section{
+    width: 50%; /* chaque section prend la moitier de l'article */ 
+    text-align: center; /* aligne le contenu au centre */
+    margin: 2em;
+}
+
+article.text{
+    border-radius: 15px;
+    color: aliceblue;
+}
+
+article:first-of-type .text{ /* cible la section de texte du premier article */
+    text-align: left; /* aligne le texte à gauche */
+}
+
+article:last-of-type .text{ /* /!\ pas section mais article, cible la section text du dernier article */
+    text-align: right; /* aligne le contenu à droite */
+}
+
+section .img{
+    margin: auto; /* centre l'image en hauteur et sur les côtés */
+}
+
+section img{
+    overflow: hidden; /* cache l'image qui dépasse des border radius */
+    border-radius: 300px; /* mettre un border radius de la taille en pixel de l'image pour faire un rond */
+    -webkit-border-radius: 300px;
+    -moz-border-radius: 300px;
+    width: 300px;
+    height: 300px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0.5 1em;
+    height: 90px;
+    background: rgb(45, 253, 149);
+    background: linear-gradient(0deg, rgba(45, 253, 149, 0.681) 0%, rgba(34, 193, 1) 100%);
+    -webkit-box-shadow: 0px -5px 10px 0px rgba(99, 170, 166, 1);
+    -moz-box-shadow: 0px -5px 10px 0px rgba(99, 170, 166, 1);
+    box-shadow: 0px -5px 10px 0px rgba(99, 170, 166, 1);
+    /* box shadow vers le haut */ 
+}
+
+footer small{
+    margin: 0;
+    padding: 0 1em;
+    color: aliceblue;
+}
+
+.paiement i{
+    font-size: 1.4rem;
+    padding: 0em 0.4em;
+    color: aliceblue;
+    line-height: 90px;
+}
+
+@media screen and (max-width: 800px) {
+    nav ul li{
+        margin: auto 1em; /* espace les items */
+    }
+
+    article{
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    section.img{
+        margin: 2em auto 0;
+    }
+
+    footer{
+        height: auto;
+        justify-content: center;
+    }
+
+    .paiement i{
+        line-height: 150%;
+    }
+}
+
+@media screen and (max-width: 650px){
+    nav{
+        margin: 1em
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li a{
+        line-height: 150%;
+        font-size: 1rem;
+        line-height: 30px;
+    }
+
+    section{
+        width: 100%;
+        /* chaque section prend la moitier de l'article */
+    }
+    
+}
